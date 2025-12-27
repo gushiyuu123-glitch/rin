@@ -32,14 +32,13 @@ export default function Home() {
   return (
     <>
       {/* =====================================================
-          PC（md以上のみ表示）
+          PC（md以上）
       ===================================================== */}
       <div className="hidden md:block">
         <Header />
         <Hero />
 
-        {/* concept */}
-        <section id="concept" className="scroll-mt-[64px]">
+        <section id="concept-pc" className="scroll-mt-[72px]">
           <Section title="やりすぎないことを、大切にしています。">
             <p>
               仕上がりが派手になりすぎないよう、<br />
@@ -48,33 +47,27 @@ export default function Home() {
           </Section>
         </section>
 
-        {/* criteria */}
-        <section id="criteria" className="scroll-mt-[64px]">
+        <section id="criteria-pc" className="scroll-mt-[72px]">
           <Section03 />
         </section>
 
-        {/* fit */}
-        <section id="fit" className="scroll-mt-[64px]">
+        <section id="fit-pc" className="scroll-mt-[72px]">
           <Section04 />
         </section>
 
-        {/* attitude */}
-        <section id="attitude" className="scroll-mt-[64px]">
+        <section id="attitude-pc" className="scroll-mt-[72px]">
           <Section05 />
         </section>
 
-        {/* pricing */}
-        <section id="pricing" className="scroll-mt-[64px]">
+        <section id="pricing" className="scroll-mt-[72px]">
           <Section06 />
         </section>
 
-        {/* review */}
-        <section id="review" className="scroll-mt-[64px]">
+        <section id="review" className="scroll-mt-[72px]">
           <SectionReview />
         </section>
 
-        {/* contact */}
-        <section id="contact" className="scroll-mt-[64px]">
+        <section id="contact" className="scroll-mt-[72px]">
           <Section07 />
         </section>
 
@@ -82,37 +75,37 @@ export default function Home() {
       </div>
 
       {/* =====================================================
-          SP（md未満のみ表示）
+          SP（md未満）
       ===================================================== */}
       <div className="md:hidden">
         <HeaderSP />
         <HeroSP />
 
-        <section id="concept">
+        <section id="concept-sp">
           <Section02SP />
         </section>
 
-        <section id="criteria">
+        <section id="criteria-sp">
           <Section03SP />
         </section>
 
-        <section id="fit">
+        <section id="fit-sp">
           <Section04SP />
         </section>
 
-        <section id="attitude">
+        <section id="attitude-sp">
           <Section05SP />
         </section>
 
-        <section id="pricing">
+        <section id="pricing-sp" className="scroll-mt-[64px]">
           <Section06SP />
         </section>
 
-        <section id="review">
+        <section id="review-sp" className="scroll-mt-[64px]">
           <SectionReviewSP />
         </section>
 
-        <section id="contact">
+        <section id="contact-sp" className="scroll-mt-[64px]">
           <Section07SP />
         </section>
 

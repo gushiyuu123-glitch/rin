@@ -1,49 +1,50 @@
 // src/components/sp/HeaderSP.jsx
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-const HEADER_HEIGHT = 64; // CSSと一致させる
+const HEADER_HEIGHT = 64;
 
 export default function HeaderSP() {
   const [open, setOpen] = useState(false);
 
-  // ===== body scroll lock =====
-  useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
-    return () => (document.body.style.overflow = "");
-  }, [open]);
+  /* =========================
+     scroll functions
+  ========================= */
+  const jumpTop = () => {
+    setOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const jumpTo = (id) => {
-    // ① 先にメニューを閉じる
     setOpen(false);
 
-    // ② overlay解除後にスクロール
-    setTimeout(() => {
+    // overlay が消えてからスクロール
+    requestAnimationFrame(() => {
       const el = document.getElementById(id);
       if (!el) {
         console.warn("target not found:", id);
         return;
       }
 
-      const y = el.offsetTop - HEADER_HEIGHT;
+      const y =
+        el.getBoundingClientRect().top +
+        window.scrollY -
+        HEADER_HEIGHT;
 
       window.scrollTo({
         top: y,
         behavior: "smooth",
       });
-    }, 200);
-  };
-
-  const jumpTop = () => {
-    setOpen(false);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   };
 
   return (
     <>
-      {/* HEADER */}
+      {/* =========================
+          HEADER BAR
+      ========================= */}
       <header className="fixed top-0 left-0 w-full z-50 bg-white/75 backdrop-blur border-b border-neutral-200">
         <div className="h-[64px] px-5 flex items-center justify-between">
-          {/* ロゴ（トップへ） */}
+          {/* LOGO */}
           <button
             onClick={jumpTop}
             className="text-[13px] tracking-[0.26em] text-rin"
@@ -52,6 +53,7 @@ export default function HeaderSP() {
             R I N
           </button>
 
+          {/* MENU */}
           <button
             onClick={() => setOpen(true)}
             className="text-[12px] tracking-[0.18em] text-rin"
@@ -63,40 +65,44 @@ export default function HeaderSP() {
         </div>
       </header>
 
-      {/* OVERLAY MENU */}
+      {/* =========================
+          OVERLAY MENU
+      ========================= */}
       {open && (
         <div
           id="sp-menu"
-          className="fixed inset-0 z-[60] bg-white/96 backdrop-blur"
+          className="fixed inset-0 z-[60] bg-white/96 backdrop-blur flex items-center justify-center"
           role="dialog"
           aria-modal="true"
           aria-label="ナビゲーションメニュー"
         >
+          {/* CLOSE */}
           <button
             onClick={() => setOpen(false)}
-            className="absolute top-5 right-5 text-[14px] tracking-[0.18em] text-rin"
+            className="absolute top-5 right-5 w-[36px] h-[36px] flex items-center justify-center text-[18px] text-rin"
             aria-label="メニューを閉じる"
           >
             ×
           </button>
 
-          <nav className="h-full flex flex-col items-center justify-center gap-12 text-center">
+          {/* NAV */}
+          <nav className="flex flex-col items-center gap-12 text-center">
             <button
-              onClick={() => jumpTo("pricing")}
+              onClick={() => jumpTo("pricing-sp")}
               className="text-[14px] tracking-[0.22em] text-rinSub"
             >
               料金について
             </button>
 
             <button
-              onClick={() => jumpTo("review")}
+              onClick={() => jumpTo("review-sp")}
               className="text-[14px] tracking-[0.22em] text-rinSub"
             >
               ご来店の声
             </button>
 
             <button
-              onClick={() => jumpTo("contact")}
+              onClick={() => jumpTo("contact-sp")}
               className="text-[14px] tracking-[0.26em] text-rin border-b border-rin pb-1"
             >
               ご相談・ご予約

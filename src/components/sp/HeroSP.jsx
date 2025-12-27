@@ -1,4 +1,3 @@
-// src/components/sp/HeroSP.jsx
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
@@ -9,11 +8,11 @@ export default function HeroSP() {
     const items = rootRef.current.querySelectorAll("[data-anim]");
     gsap.fromTo(
       items,
-      { opacity: 0, y: 12 },
+      { opacity: 0, y: 14 },
       {
         opacity: 1,
         y: 0,
-        duration: 1.1,
+        duration: 1.0,
         ease: "power2.out",
         stagger: 0.14,
       }
@@ -25,12 +24,11 @@ export default function HeroSP() {
       ref={rootRef}
       className="
         relative
-        min-h-[100svh]
-        overflow-hidden
+        min-h-screen
         bg-white
       "
     >
-      {/* ===== 背景 ===== */}
+      {/* 背景 */}
       <div className="absolute inset-0">
         <img
           src="/assets/images/hero-sp.png"
@@ -40,80 +38,52 @@ export default function HeroSP() {
             object-[48%_38%]
             brightness-[0.98]
             saturate-[0.92]
-            contrast-[1.02]
           "
         />
 
-        {/* 写真の質感を整える白膜（弱め） */}
-        <div className="absolute inset-0 bg-white/06" />
-
-        {/* 下部：文字のための空気 */}
-        <div
-          className="
-            absolute inset-0
-            bg-gradient-to-t
-            from-white/65
-            via-white/32
-            to-white/00
-          "
-        />
+        {/* 下部グラデ */}
+        <div className="absolute inset-0 bg-gradient-to-t from-white/70 via-white/35 to-transparent" />
       </div>
 
-      {/* ===== テキスト ===== */}
-      <div
-        className="
-          relative z-10
-          flex flex-col justify-end
-          min-h-[100svh]
-          px-6 pb-16
-          text-center
-        "
-      >
+      {/* テキスト */}
+      <div className="relative z-10 flex flex-col justify-end min-h-screen px-6 pb-16 text-center">
         <h1
-          className="
-            text-[22px]
-            leading-[1.9]
-            tracking-[0.08em]
-            text-rin
-          "
+          className="text-[22px] leading-[1.9] tracking-[0.08em] text-rin"
           data-anim
         >
           派手にしない。<br />
-          <span className="opacity-85">
-            安心して通える。
-          </span>
+          <span className="opacity-85">安心して通える。</span>
         </h1>
 
         <p
-          className="
-            mt-6
-            text-[13px]
-            leading-[2]
-            tracking-[0.06em]
-            text-rinSub
-          "
+          className="mt-6 text-[13px] leading-[2] tracking-[0.06em] text-rinSub"
           data-anim
         >
           自然さの基準を、事前に共有します。
         </p>
 
         <div className="mt-10" data-anim>
-          <a
-            href="#contact"
+          <button
+            onClick={() => {
+              const el = document.getElementById("contact");
+              if (!el) return;
+              const y =
+                el.getBoundingClientRect().top +
+                window.pageYOffset -
+                64;
+              window.scrollTo({ top: y, behavior: "smooth" });
+            }}
             className="
-              inline-flex items-center justify-center
               w-full h-[46px]
               text-[12px]
               tracking-[0.22em]
               text-rin
               border border-black/12
-              bg-white/60
-              hover:bg-white/75
-              transition
+              bg-white/70
             "
           >
             ご予約へ
-          </a>
+          </button>
         </div>
       </div>
     </section>

@@ -1,17 +1,12 @@
 // src/components/Header.jsx
+
 export default function Header() {
   return (
     <header
       className="
-        fixed
-        top-0
-        left-0
-        w-full
-        z-50
-        bg-white/70
-        backdrop-blur
-        border-b
-        border-neutral-200
+        fixed top-0 left-0 w-full z-50
+        bg-white/70 backdrop-blur
+        border-b border-neutral-200
       "
     >
       <div
@@ -20,24 +15,29 @@ export default function Header() {
           mx-auto
           px-12
           h-[72px]
-          flex
-          items-center
-          justify-between
+          flex items-center justify-between
         "
       >
-        {/* ロゴ（トップへ） */}
+        {/* ======================
+            LOGO
+        ====================== */}
         <a
           href="#concept"
           className="
             text-[14px]
             tracking-[0.28em]
             text-rin
+            hover:opacity-80
+            transition-opacity
           "
+          aria-label="コンセプトへ"
         >
           R I N
         </a>
 
-        {/* ナビ */}
+        {/* ======================
+            NAVIGATION
+        ====================== */}
         <nav
           className="flex items-center gap-12"
           aria-label="グローバルナビゲーション"
@@ -74,8 +74,7 @@ export default function Header() {
               text-[12px]
               tracking-[0.2em]
               text-rin
-              border-b
-              border-rin
+              border-b border-rin
               pb-1
               hover:opacity-70
               transition-opacity
