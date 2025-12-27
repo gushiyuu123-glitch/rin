@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+  background: #ffffff;
+  color: #3E3A36;
+  line-height: 1.8;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
