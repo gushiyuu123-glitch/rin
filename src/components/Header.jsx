@@ -27,7 +27,7 @@ export default function Header() {
       >
         {/* ロゴ（トップへ） */}
         <a
-          href="#"
+          href="#concept"
           className="
             text-[14px]
             tracking-[0.28em]
@@ -38,7 +38,10 @@ export default function Header() {
         </a>
 
         {/* ナビ */}
-        <nav className="flex items-center gap-12">
+        <nav
+          className="flex items-center gap-12"
+          aria-label="グローバルナビゲーション"
+        >
           <a
             href="#pricing"
             className="

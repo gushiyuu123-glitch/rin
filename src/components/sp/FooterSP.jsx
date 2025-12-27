@@ -3,7 +3,10 @@ export default function FooterSP() {
   return (
     <footer className="bg-white border-t border-neutral-200 py-20">
       <div className="max-w-[420px] mx-auto px-6 text-center">
-        {/* ブランド */}
+
+        {/* =====================
+            ブランド
+        ===================== */}
         <p
           className="
             text-[14px]
@@ -15,7 +18,9 @@ export default function FooterSP() {
           R I N
         </p>
 
-        {/* スタンス */}
+        {/* =====================
+            スタンス
+        ===================== */}
         <p
           className="
             text-[11px]
@@ -29,20 +34,33 @@ export default function FooterSP() {
           まつエクサロンです。
         </p>
 
-        {/* 道しるべ */}
-        <div className="flex justify-center gap-10 mb-18">
-          <span className="text-[11px] tracking-[0.16em] text-rinSub">
+        {/* =====================
+            道しるべ
+        ===================== */}
+        <div className="flex justify-center gap-10 mb-16">
+          <a
+            href="#pricing"
+            className="text-[11px] tracking-[0.16em] text-rinSub"
+          >
             料金について
-          </span>
-          <span className="text-[11px] tracking-[0.16em] text-rinSub">
+          </a>
+          <a
+            href="#contact"
+            className="text-[11px] tracking-[0.16em] text-rinSub"
+          >
             ご相談・ご予約
-          </span>
-          <span className="text-[11px] tracking-[0.16em] text-rinSub">
+          </a>
+          <a
+            href="#access"
+            className="text-[11px] tracking-[0.16em] text-rinSub"
+          >
             アクセス
-          </span>
+          </a>
         </div>
 
-        {/* クレジット */}
+        {/* =====================
+            クレジット
+        ===================== */}
         <p
           className="
             text-[9px]
@@ -67,6 +85,7 @@ export default function FooterSP() {
         >
           Designed by GUSHIKEN DESIGN
         </a>
+
       </div>
     </footer>
   );

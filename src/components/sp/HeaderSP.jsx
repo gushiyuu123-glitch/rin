@@ -1,4 +1,7 @@
+// src/components/sp/HeaderSP.jsx
 import { useState, useEffect } from "react";
+
+const HEADER_HEIGHT = 64; // CSSと一致させる
 
 export default function HeaderSP() {
   const [open, setOpen] = useState(false);
@@ -13,7 +16,7 @@ export default function HeaderSP() {
     // ① 先にメニューを閉じる
     setOpen(false);
 
-    // ② 次のフレームでスクロール（overlay完全解除後）
+    // ② overlay解除後にスクロール
     setTimeout(() => {
       const el = document.getElementById(id);
       if (!el) {
@@ -21,7 +24,7 @@ export default function HeaderSP() {
         return;
       }
 
-      const y = el.offsetTop - 64; // header 高さ
+      const y = el.offsetTop - HEADER_HEIGHT;
 
       window.scrollTo({
         top: y,
@@ -30,30 +33,49 @@ export default function HeaderSP() {
     }, 200);
   };
 
+  const jumpTop = () => {
+    setOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       {/* HEADER */}
       <header className="fixed top-0 left-0 w-full z-50 bg-white/75 backdrop-blur border-b border-neutral-200">
         <div className="h-[64px] px-5 flex items-center justify-between">
-          <span className="text-[13px] tracking-[0.26em] text-rin">
+          {/* ロゴ（トップへ） */}
+          <button
+            onClick={jumpTop}
+            className="text-[13px] tracking-[0.26em] text-rin"
+            aria-label="トップへ戻る"
+          >
             R I N
-          </span>
+          </button>
 
           <button
             onClick={() => setOpen(true)}
             className="text-[12px] tracking-[0.18em] text-rin"
+            aria-expanded={open}
+            aria-controls="sp-menu"
           >
             MENU
           </button>
         </div>
       </header>
 
-      {/* OVERLAY */}
+      {/* OVERLAY MENU */}
       {open && (
-        <div className="fixed inset-0 z-[60] bg-white/96 backdrop-blur">
+        <div
+          id="sp-menu"
+          className="fixed inset-0 z-[60] bg-white/96 backdrop-blur"
+          role="dialog"
+          aria-modal="true"
+          aria-label="ナビゲーションメニュー"
+        >
           <button
             onClick={() => setOpen(false)}
             className="absolute top-5 right-5 text-[14px] tracking-[0.18em] text-rin"
+            aria-label="メニューを閉じる"
           >
             ×
           </button>

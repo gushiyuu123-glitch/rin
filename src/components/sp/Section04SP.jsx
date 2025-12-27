@@ -16,7 +16,10 @@ export default function Section04SP() {
       className="py-28 bg-white"
     >
       <div className="px-6 text-center sp-fit">
-        {/* 見出し */}
+
+        {/* =====================
+            見出し
+        ===================== */}
         <h2
           className="
             text-[20px]
@@ -29,7 +32,9 @@ export default function Section04SP() {
           RINが大切にしている考え方
         </h2>
 
-        {/* 補足 */}
+        {/* =====================
+            補足
+        ===================== */}
         <p
           className="
             text-[13px]
@@ -43,9 +48,11 @@ export default function Section04SP() {
           施術の方向性を大切にしています。
         </p>
 
-        {/* 向いている方 */}
-        <div className="mb-20">
-          <p
+        {/* =====================
+            向いている方
+        ===================== */}
+        <section className="mb-20">
+          <h3
             className="
               text-[14px]
               tracking-[0.12em]
@@ -54,7 +61,8 @@ export default function Section04SP() {
             "
           >
             このような方に向いています
-          </p>
+          </h3>
+
           <ul
             className="
               text-[14px]
@@ -69,11 +77,13 @@ export default function Section04SP() {
             <li>事前にしっかり相談したい方</li>
             <li>無理なく、日常の延長として通いたい方</li>
           </ul>
-        </div>
+        </section>
 
-        {/* 向いていない方（トーンを下げる） */}
-        <div className="opacity-75">
-          <p
+        {/* =====================
+            向いていない方
+        ===================== */}
+        <section className="opacity-75">
+          <h3
             className="
               text-[13px]
               tracking-[0.10em]
@@ -82,7 +92,8 @@ export default function Section04SP() {
             "
           >
             もしかすると合わないかもしれません
-          </p>
+          </h3>
+
           <ul
             className="
               text-[13px]
@@ -96,9 +107,11 @@ export default function Section04SP() {
             <li>本数やボリュームを重視したい方</li>
             <li>すべてお任せで決めたい方</li>
           </ul>
-        </div>
+        </section>
 
-        {/* 余韻 */}
+        {/* =====================
+            余韻
+        ===================== */}
         <p
           className="
             mt-24
@@ -111,6 +124,7 @@ export default function Section04SP() {
           良い・悪いではなく、<br />
           大切にしている考え方の違いです。
         </p>
+
       </div>
     </section>
   );

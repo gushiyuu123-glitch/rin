@@ -30,7 +30,9 @@ export default function Section07SP() {
             text-center
           "
         >
-          {/* 前置き */}
+          {/* =====================
+              前置き
+          ===================== */}
           <p
             className="
               text-[12px]
@@ -42,7 +44,9 @@ export default function Section07SP() {
             少し気になる、くらいで十分です。
           </p>
 
-          {/* 核 */}
+          {/* =====================
+              核
+          ===================== */}
           <p
             className="
               text-[15px]
@@ -56,8 +60,12 @@ export default function Section07SP() {
             来てください。
           </p>
 
-          {/* 擬似CTA */}
-          <span
+          {/* =====================
+              擬似CTA
+          ===================== */}
+          <button
+            type="button"
+            aria-label="ご相談・ご予約について"
             className="
               inline-block
               text-[11px]
@@ -67,10 +75,11 @@ export default function Section07SP() {
               border-rin
               pb-1
               select-none
+              bg-transparent
             "
           >
             ご相談・ご予約について
-          </span>
+          </button>
         </div>
       </div>
     </section>

@@ -2,8 +2,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-import heroImg from "../../assets/images/hero-sp.png";
-
 export default function HeroSP() {
   const rootRef = useRef(null);
 
@@ -35,11 +33,11 @@ export default function HeroSP() {
       {/* ===== 背景 ===== */}
       <div className="absolute inset-0">
         <img
-          src={heroImg}
+          src="/assets/images/hero-sp.png"
           alt="自然な目元の仕上がり"
           className="
             w-full h-full object-cover
-            object-[48%_38%]   /* ← 右に寄せた */
+            object-[48%_38%]
             brightness-[0.98]
             saturate-[0.92]
             contrast-[1.02]
@@ -49,7 +47,7 @@ export default function HeroSP() {
         {/* 写真の質感を整える白膜（弱め） */}
         <div className="absolute inset-0 bg-white/06" />
 
-        {/* 下部：文字のための空気（白を削る） */}
+        {/* 下部：文字のための空気 */}
         <div
           className="
             absolute inset-0
@@ -61,17 +59,13 @@ export default function HeroSP() {
         />
       </div>
 
-      {/* ===== テキスト（下寄せ） ===== */}
+      {/* ===== テキスト ===== */}
       <div
         className="
-          relative
-          z-10
-          flex
-          flex-col
-          justify-end
+          relative z-10
+          flex flex-col justify-end
           min-h-[100svh]
-          px-6
-          pb-16
+          px-6 pb-16
           text-center
         "
       >
@@ -105,18 +99,14 @@ export default function HeroSP() {
 
         <div className="mt-10" data-anim>
           <a
-            href="#reserve"
+            href="#contact"
             className="
-              inline-flex
-              items-center
-              justify-center
-              w-full
-              h-[46px]
+              inline-flex items-center justify-center
+              w-full h-[46px]
               text-[12px]
               tracking-[0.22em]
               text-rin
-              border
-              border-black/12
+              border border-black/12
               bg-white/60
               hover:bg-white/75
               transition

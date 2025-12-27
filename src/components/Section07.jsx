@@ -19,14 +19,8 @@ export default function Section07() {
         page-fade-contact
       "
     >
-      <div
-        className="
-          max-w-[720px]
-          mx-auto
-          px-12
-        "
-      >
-        {/* ===== 導線ブロック（決断点） ===== */}
+      <div className="max-w-[720px] mx-auto px-12">
+        {/* ===== 導線ブロック ===== */}
         <div
           className="
             bg-white
@@ -36,7 +30,7 @@ export default function Section07() {
             text-center
           "
         >
-          {/* 前置き（心理の許可） */}
+          {/* 前置き */}
           <p
             className="
               text-[13px]
@@ -48,7 +42,7 @@ export default function Section07() {
             少し気になる、くらいで十分です。
           </p>
 
-          {/* メインメッセージ（核心） */}
+          {/* 核 */}
           <p
             className="
               text-[17px]
@@ -63,7 +57,9 @@ export default function Section07() {
           </p>
 
           {/* 疑似CTA（リンク未満） */}
-          <span
+          <button
+            type="button"
+            aria-label="ご相談・ご予約について"
             className="
               inline-block
               text-[12px]
@@ -74,10 +70,11 @@ export default function Section07() {
               pb-1
               cursor-default
               select-none
+              bg-transparent
             "
           >
             ご相談・ご予約について
-          </span>
+          </button>
         </div>
       </div>
     </section>

@@ -19,7 +19,10 @@ export default function Section05SP() {
       "
     >
       <div className="px-6 text-center sp-attitude">
-        {/* 見出し（静かに） */}
+
+        {/* =====================
+            見出し（静かに）
+        ===================== */}
         <h2
           className="
             text-[20px]
@@ -31,16 +34,21 @@ export default function Section05SP() {
           決めない、という選択。
         </h2>
 
-        {/* 写真（証拠） */}
+        {/* =====================
+            写真（証拠）
+        ===================== */}
         <div className="mb-20">
           <img
-            src="src/assets/images/rin-consulting.png"
+            src="/assets/images/rin-consulting.png"
             alt="カウンセリングの様子"
+            loading="lazy"
             className="w-full object-cover"
           />
         </div>
 
-        {/* 感情の入口 */}
+        {/* =====================
+            感情の入口
+        ===================== */}
         <p
           className="
             text-[16px]
@@ -53,7 +61,9 @@ export default function Section05SP() {
           これでいいのかな…？
         </p>
 
-        {/* 強い断言 */}
+        {/* =====================
+            強い断言
+        ===================== */}
         <p
           className="
             text-[18px]
@@ -67,7 +77,9 @@ export default function Section05SP() {
           進めることはしません。
         </p>
 
-        {/* 補足（2ブロック） */}
+        {/* =====================
+            補足（2ブロック）
+        ===================== */}
         <div className="space-y-12">
           <p
             className="
@@ -94,7 +106,9 @@ export default function Section05SP() {
           </p>
         </div>
 
-        {/* 余韻 */}
+        {/* =====================
+            余韻
+        ===================== */}
         <p
           className="
             mt-24
@@ -110,6 +124,7 @@ export default function Section05SP() {
           流れ作業のような施術を、<br />
           ここでは行っていません。
         </p>
+
       </div>
     </section>
   );

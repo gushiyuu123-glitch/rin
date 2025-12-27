@@ -18,7 +18,7 @@ export default function SectionReviewSP() {
       "
       style={{
         backgroundImage:
-          "url('src/assets/images/rin-consulting-soft1.png')",
+          "url('/assets/images/rin-consulting-soft1.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -41,7 +41,6 @@ export default function SectionReviewSP() {
           pointer-events-none
         "
       />
-      
 
       {/* ===== コンテンツ ===== */}
       <div

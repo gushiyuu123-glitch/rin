@@ -8,6 +8,7 @@ export default function Footer() {
         border-neutral-200
         py-28
       "
+      aria-label="フッター"
     >
       <div
         className="
@@ -18,16 +19,17 @@ export default function Footer() {
         "
       >
         {/* ===== ブランド ===== */}
-        <p
+        <h2
           className="
             text-[16px]
             tracking-[0.26em]
             text-rin
             mb-10
+            font-normal
           "
         >
           R I N
-        </p>
+        </h2>
 
         {/* ===== スタンス ===== */}
         <p
@@ -43,50 +45,60 @@ export default function Footer() {
           まつエクサロンです。
         </p>
 
-        {/* ===== フッターリンク（情報ではなく、道しるべ） ===== */}
-        <div
+        {/* ===== フッターナビ（仮リンク） ===== */}
+        <nav
           className="
             flex
             justify-center
             gap-16
             mb-28
           "
+          aria-label="フッターナビゲーション"
         >
-          <span
+          <a
+            href="#pricing"
             className="
               text-[12px]
               tracking-[0.18em]
               text-rinSub
-              cursor-default
+              hover:text-rin
+              transition-colors
             "
           >
             料金について
-          </span>
+          </a>
 
-          <span
+          <a
+            href="#contact"
             className="
               text-[12px]
               tracking-[0.18em]
               text-rinSub
-              cursor-default
+              hover:text-rin
+              transition-colors
             "
           >
             ご相談・ご予約
-          </span>
+          </a>
 
-          <span
+          {/* 仮：アクセス */}
+          <a
+            href="#"
+            aria-disabled="true"
+            onClick={(e) => e.preventDefault()}
             className="
               text-[12px]
               tracking-[0.18em]
               text-rinSub
-              cursor-default
+              opacity-60
+              cursor-not-allowed
             "
           >
-            アクセス
-          </span>
-        </div>
+            アクセス（準備中）
+          </a>
+        </nav>
 
-        {/* ===== クレジット（そっと） ===== */}
+        {/* ===== クレジット ===== */}
         <p
           className="
             text-[10px]
@@ -98,7 +110,7 @@ export default function Footer() {
           © RIN eyelash salon
         </p>
 
-        {/* ===== 制作者リンク（気づく人だけ） ===== */}
+        {/* ===== 制作者リンク ===== */}
         <a
           href="https://gushikendesign.com/"
           target="_blank"

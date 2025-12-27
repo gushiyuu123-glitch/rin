@@ -15,7 +15,9 @@ export default function Section03SP() {
       id="criteria"
       className="bg-[#fafafa]"
     >
-      {/* ===== 見出し ===== */}
+      {/* =====================
+          見出し
+      ===================== */}
       <div className="py-28 px-6 text-center sp-criteria">
         <h2
           className="
@@ -30,7 +32,9 @@ export default function Section03SP() {
         </h2>
       </div>
 
-      {/* ===== 基準 01 ===== */}
+      {/* =====================
+          基準 01
+      ===================== */}
       <div className="pb-24 px-6 sp-criteria">
         <p
           className="
@@ -42,6 +46,7 @@ export default function Section03SP() {
         >
           足さない判断
         </p>
+
         <p
           className="
             text-[14px]
@@ -55,14 +60,17 @@ export default function Section03SP() {
 
         <div className="mt-12">
           <img
-            src="src/assets/images/criteria-01-sp.png"
+            src="/assets/images/criteria-01-sp.png"
             alt="仕上がりを抑える判断の様子"
+            loading="lazy"
             className="w-full object-cover"
           />
         </div>
       </div>
 
-      {/* ===== 基準 02 ===== */}
+      {/* =====================
+          基準 02
+      ===================== */}
       <div className="pb-24 px-6 sp-criteria">
         <p
           className="
@@ -74,6 +82,7 @@ export default function Section03SP() {
         >
           横顔での確認
         </p>
+
         <p
           className="
             text-[14px]
@@ -87,14 +96,17 @@ export default function Section03SP() {
 
         <div className="mt-12">
           <img
-            src="src/assets/images/criteria-02-sp.png"
+            src="/assets/images/criteria-02-sp.png"
             alt="横顔から確認する様子"
+            loading="lazy"
             className="w-full object-cover"
           />
         </div>
       </div>
 
-      {/* ===== 基準 03 ===== */}
+      {/* =====================
+          基準 03
+      ===================== */}
       <div className="pb-32 px-6 sp-criteria">
         <p
           className="
@@ -106,6 +118,7 @@ export default function Section03SP() {
         >
           崩れない自然さ
         </p>
+
         <p
           className="
             text-[14px]
@@ -119,8 +132,9 @@ export default function Section03SP() {
 
         <div className="mt-12">
           <img
-            src="src/assets/images/criteria-03-sp.png"
+            src="/assets/images/criteria-03-sp.png"
             alt="時間が経っても自然な仕上がり"
+            loading="lazy"
             className="w-full object-cover"
           />
         </div>

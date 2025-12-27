@@ -3,30 +3,30 @@ import usePageFade from "../hooks/usePageFade";
 
 export default function Section02() {
   usePageFade(".page-fade-concept-head", {
-  y: 18,
-  blur: true,
-  duration: 1.2,
-  ease: "expo.out",
-  start: "top 82%",
-});
+    y: 18,
+    blur: true,
+    duration: 1.2,
+    ease: "expo.out",
+    start: "top 82%",
+  });
 
-usePageFade(".page-fade-concept-text", {
-  y: 12,
-  blur: false,
-  duration: 1.0,
-  delay: 0.15,
-  ease: "power2.out",
-  start: "top 78%",
-});
+  usePageFade(".page-fade-concept-text", {
+    y: 12,
+    blur: false,
+    duration: 1.0,
+    delay: 0.15,
+    ease: "power2.out",
+    start: "top 78%",
+  });
 
-usePageFade(".page-fade-concept-image", {
-  y: 8,
-  blur: false,
-  duration: 0.9,
-  delay: 0.25,
-  ease: "power2.out",
-  start: "top 72%",
-});
+  usePageFade(".page-fade-concept-image", {
+    y: 8,
+    blur: false,
+    duration: 0.9,
+    delay: 0.25,
+    ease: "power2.out",
+    start: "top 72%",
+  });
 
   return (
     <section
@@ -37,6 +37,10 @@ usePageFade(".page-fade-concept-image", {
       "
     >
       <div className="max-w-[880px] mx-auto px-12 text-center">
+
+        {/* =====================
+            見出し
+        ===================== */}
         <h2
           className="
             text-[24px]
@@ -50,6 +54,9 @@ usePageFade(".page-fade-concept-image", {
           やりすぎないことを、大切にしています。
         </h2>
 
+        {/* =====================
+            テキスト
+        ===================== */}
         <div
           className="
             text-[15px]
@@ -76,11 +83,14 @@ usePageFade(".page-fade-concept-image", {
           </p>
         </div>
 
-        {/* 写真（証拠） */}
+        {/* =====================
+            写真（証拠）
+        ===================== */}
         <div className="mt-20">
           <img
-            src="src/assets/images/section.png"
+            src="/assets/images/section.png"
             alt="カウンセリングの様子"
+            loading="lazy"
             className="
               w-full
               max-w-[640px]
@@ -90,6 +100,7 @@ usePageFade(".page-fade-concept-image", {
             "
           />
         </div>
+
       </div>
     </section>
   );

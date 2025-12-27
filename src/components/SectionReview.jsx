@@ -18,13 +18,16 @@ export default function SectionReview() {
       "
       style={{
         backgroundImage:
-          "url('src/assets/images/rin-consulting-soft1.png')",
+          "url('/assets/images/rin-consulting-soft1.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
       {/* 背景をほんの少しだけ現実から引く */}
-      <div className="absolute inset-0 bg-white/06" />
+      <div
+        className="absolute inset-0 bg-white/06"
+        aria-hidden
+      />
 
       {/* ===== 文字のためだけの白い空気（局所グラデ） ===== */}
       <div
@@ -43,6 +46,7 @@ export default function SectionReview() {
           blur-[0.5px]
           pointer-events-none
         "
+        aria-hidden
       />
 
       {/* ===== コンテンツ ===== */}
@@ -69,7 +73,7 @@ export default function SectionReview() {
 
         {/* レビュー */}
         <div className="space-y-20">
-          {/* メイン（最も安心を語る） */}
+          {/* メイン */}
           <p
             className="
               text-[15px]

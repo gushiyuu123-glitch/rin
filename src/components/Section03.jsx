@@ -19,7 +19,10 @@ export default function Section03() {
       "
     >
       <div className="max-w-[1040px] mx-auto px-12">
-        {/* 見出し */}
+
+        {/* =====================
+            見出し
+        ===================== */}
         <h2
           className="
             text-center
@@ -34,7 +37,9 @@ export default function Section03() {
           自然さには、基準があります。
         </h2>
 
-        {/* 中央2カラム */}
+        {/* =====================
+            中央2カラム
+        ===================== */}
         <div
           className="
             grid
@@ -89,8 +94,9 @@ export default function Section03() {
             "
           >
             <img
-              src="src/assets/images/section03.png"
+              src="/assets/images/section03.png"
               alt="横顔から仕上がりを確認する様子"
+              loading="lazy"
               className="
                 w-[150%]
                 object-cover
@@ -98,6 +104,7 @@ export default function Section03() {
             />
           </div>
         </div>
+
       </div>
     </section>
   );

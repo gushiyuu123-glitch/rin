@@ -19,7 +19,10 @@ export default function Section02SP() {
       "
     >
       <div className="px-6 text-center sp-concept">
-        {/* 見出し */}
+
+        {/* =====================
+            見出し
+        ===================== */}
         <h2
           className="
             text-[20px]
@@ -33,7 +36,9 @@ export default function Section02SP() {
           大切にしています。
         </h2>
 
-        {/* 本文：1ブロック */}
+        {/* =====================
+            コンセプト本文
+        ===================== */}
         <p
           className="
             text-[14px]
@@ -46,11 +51,14 @@ export default function Section02SP() {
           「足す」よりも「抑える」判断を重視しています。
         </p>
 
-        {/* 写真：証拠 */}
+        {/* =====================
+            写真（証拠）
+        ===================== */}
         <div className="mt-16">
           <img
-            src="src/assets/images/section.png"
+           src="/assets/images/section.png"
             alt="カウンセリングの様子"
+            loading="lazy"
             className="
               w-full
               object-cover
@@ -59,7 +67,9 @@ export default function Section02SP() {
           />
         </div>
 
-        {/* 補足（1行だけ） */}
+        {/* =====================
+            補足テキスト
+        ===================== */}
         <p
           className="
             mt-10
@@ -72,6 +82,7 @@ export default function Section02SP() {
         >
           仕上がりの基準を、事前に共有します。
         </p>
+
       </div>
     </section>
   );

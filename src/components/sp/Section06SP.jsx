@@ -16,56 +16,74 @@ export default function Section06SP() {
   return (
     <section id="pricing" className="py-28 bg-white">
       <div className="px-6 text-center sp-pricing">
-        {/* 見出し */}
+
+        {/* =====================
+            見出し
+        ===================== */}
         <h2 className="text-[20px] tracking-[0.12em] text-rin mb-8">
           料金について
         </h2>
 
-        {/* 導入 */}
+        {/* =====================
+            導入
+        ===================== */}
         <p className="text-[13px] leading-[2.2] tracking-[0.08em] text-rinSub mb-16">
           価格はすべて税込です。<br />
           状態に合わせて微調整します。
         </p>
 
-        {/* ===== アコーディオン ===== */}
+        {/* =====================
+            アコーディオン
+        ===================== */}
         <div className="max-w-[360px] mx-auto">
-          <button
-            onClick={() => setOpen(!open)}
-            className="
-              w-full
-              flex
-              items-center
-              justify-between
-              py-5
-              border-b
-              border-neutral-200
-              text-[14px]
-              tracking-[0.10em]
-              text-rin
-            "
-            aria-expanded={open}
-          >
-            <span>料金の目安を見る</span>
-            <span
-              className={`
-                transition-transform duration-300
-                ${open ? "rotate-180" : ""}
-              `}
-            >
-              ↓
-            </span>
-          </button>
+      <button
+  type="button"
+  onClick={() => setOpen((v) => !v)}
+  aria-expanded={open}
+  aria-controls="pricing-panel"
+  className="
+    w-full
+    relative
+    py-5
+    border-b
+    border-neutral-200
+    text-[14px]
+    tracking-[0.10em]
+    text-rin
+  "
+>
+  {/* 中央テキスト */}
+  <span className="absolute left-1/2 -translate-x-1/2 bottom-4">
+    料金の目安を見る
+  </span>
 
-          {/* 中身 */}
+  {/* 右の矢印 */}
+  <span
+    className={`
+      absolute right-0
+      transition-transform duration-300 bottom-4
+      ${open ? "rotate-180" : ""}
+    `}
+  >
+    ↓
+  </span>
+</button>
+
+
+          {/* =====================
+              中身
+          ===================== */}
           <div
+            id="pricing-panel"
             className={`
               overflow-hidden
               transition-all
               duration-300
-              ${open ? "max-h-[520px] mt-10" : "max-h-0"}
+              ${open ? "max-h-[640px] mt-10" : "max-h-0"}
             `}
           >
             <div className="space-y-14 text-center">
+
               {/* メニュー */}
               <div>
                 <p className="text-[14px] tracking-[0.10em] text-rin mb-1">
@@ -123,11 +141,14 @@ export default function Section06SP() {
           </div>
         </div>
 
-        {/* 余韻 */}
+        {/* =====================
+            余韻
+        ===================== */}
         <p className="mt-24 pt-12 border-t border-neutral-200 text-[12px] leading-[2.3] tracking-[0.14em] text-rinSub">
           初回は、カウンセリングの時間を<br />
           しっかり確保しています。
         </p>
+
       </div>
     </section>
   );
